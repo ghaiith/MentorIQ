@@ -1,0 +1,75 @@
+{% extends "userlayout.html" %}
+{% block title %}Front End{% endblock %} 
+{% block content %}
+        <section class="p-header">
+            <h1><span>Front-End</span> Development</h1>
+            <p style="text-align: center;">It is the practice of transforming data into a graphical interface,<br> through the use of some technologies, so that users can view and interact with that data.</p>
+        </section>
+    </header>
+    <main class="container mt-5">
+        <h4 style="text-align: center;">Main Languages</h4>
+        <p style="text-align: center;">These languages must be learned in order in order to learn how to design interactive web pages</p>
+        <div class="row justify-content-around  mt-5 mb-5">
+            <div class="col-md-3">
+                    <a href="{{ url_for('HtmlC') }}" class="langcard">
+                        <img src="../static/images/langicon/html.png" alt="">
+                        <h3>Html</h3>
+                        <p>The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed in a web browser. It can be assisted by technologies such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or from local storage and render the documents into multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+                    </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="langcard">
+                    <img src="../static/images/langicon/css-3.png" alt="">
+                    <h3>CSS</h3>
+                    <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML.[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript. CSS is designed to enable the separation of presentation and content, including layout, colors, and fonts. This separation can improve content accessibility, provide more flexibility and control in the specification of presentation characteristics, enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file which reduces complexity and repetition in the structural content as well as enabling the .css file to be cached to improve the page load speed between the pages that share the file and its formatting. </p>
+                </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#" class="langcard">
+                <img src="../static/images/langicon/javascript.png" alt="">
+                <h3>JavaScript</h3>
+                <p>
+                    often abbreviated as JS, is a programming language that conforms to the ECMAScript specification. JavaScript is high-level, often just-in-time compiled, and multi-paradigm. It has curly-bracket syntax, dynamic typing, prototype-based object-orientation, and first-class functions.
+                    Alongside HTML and CSS, JavaScript is one of the core technologies of the World Wide Web. Over 97% of websites use it client-side for web page behavior, often incorporating third-party libraries. All major web browsers have a dedicated JavaScript engine to execute the code on the user's device. 
+                </p>
+            </a>
+    </div>
+        </div>
+        <h4 style="text-align: center;">More languages and technologies</h4>
+        <p style="text-align: center;">You can choose what you want to learn within this path here, according to what suits you or your business</p>
+        <!-- #################### More TEQ #################### -->
+        <div class="row justify-content-between   mt-5 mb-5">
+            <div class="col-md-3">
+                    <a href="#" class="langcard">
+                        <img src="../static/images/langicon/bootstrap.png" alt="">
+                        <h3>Bootstrap</h3>
+                        <p>Quickly design and customize responsive mobile-first sites with Bootstrap, the world's most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+                    </a>
+            </div>
+            <div class="col-md-3">
+                <a href="#" class="langcard">
+                    <img src="../static/images/langicon/pngegg.png" alt="">
+                    <h3>Sass</h3>
+                    <p>Sass (short for syntactically awesome style sheets) is a preprocessor scripting language that is interpreted or compiled into Cascading Style Sheets (CSS). SassScript is the scripting language itself. Sass consists of two syntaxes. The original syntax, called "the indented syntax," uses a syntax similar to Haml. It uses indentation to separate code blocks and newline characters to separate rules. The newer syntax, "SCSS" (Sassy CSS), uses block formatting like that of CSS. It uses braces to denote code blocks and semicolons to separate rules within a block. The indented syntax and SCSS files are traditionally given the extensions .sass and .scss, respectively. </p>
+                </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#" class="langcard">
+                <img src="../static/images/langicon/uikit-285322.png" alt="">
+                <h3>UI Kit</h3>
+                <p>
+                    it is front-end framework  is a set of files that contains critical UI components like fonts, layered design files, icons, documentation, and HTML/CSS files. UI kits can be fairly simple with a few buttons and design components, or extremely robust with toggles that change fonts, colors, and shapes on the fly. UI kits save you time and keep you consistent by allowing you to create, edit, or expand on the existing components without creating them from scratch. Things like checkboxes, arrows, drop-downs, and forms are not worth re-inventing, especially when prototyping.                 </p>
+            </a>
+        </div>
+        <div class="col-md-3">
+            <a href="#" class="langcard">
+                <img src="../static/images/langicon/Materialize.png" alt="">
+                <h3>Materialize</h3>
+                <p>
+                    If you’re in love with Google’s Material Design, Materialize is a framework you’ll enjoy. The best thing is that it has only a handful of components and classes to learn, and is focused on getting you productive as fast as possible. There are few customization options, and Materialize follows the popular 12-column grid format established by Bootstrap.                </p>
+            </a>
+        </div>
+        </div>
+    </main>
+
+{% endblock %}

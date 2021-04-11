@@ -1,0 +1,52 @@
+{% extends "userlayout.html" %}
+{% block title %}Html{% endblock %} 
+{% block content %}
+        <section class="p-header">
+            <img src="../static/images/langicon/html.png" alt="">
+            <h1>HTML</h1>
+            <p style="text-align: center;">The HyperText Markup Language, or HTML is the standard markup language for documents designed to be displayed  in a web browser. It can be assisted by technologies <br> such as Cascading Style Sheets (CSS) and scripting languages such as JavaScript. Web browsers receive HTML documents from a web server or  from local storage and render the documents into <br> multimedia web pages. HTML describes the structure of a web page semantically and originally included cues for the appearance of the document.</p>
+        </section>
+    </header>
+    <main class="container mt-5">
+        <div class="row mt-5 mb-5">
+            <div class="comp">
+                <h4 style="text-align: center;">Html Editor Online</h4>
+                <a href="{{ url_for('HtmlE') }}"><button class="Compiler-btn">Editor Online</button></a>
+            </div>
+        </div>
+        <div class="comp">
+            <h4>Html Courses</h4>
+            <p>Browse All Courses about Html Here</p>
+        </div>
+        <div class="row mt-5 mb-5">
+            {% for COURSE in COURSES %}
+            <div class="col-md-3 mb-5">
+                <div class="card card-c wow bounceInUp" data-wow-duration="0.7s" style="width: 18rem;">
+                    <img src="{{ COURSE.img }}" class="card-img-top img-c" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">{{COURSE.name}}</h5>
+                      <div class="c-info">
+                          <div class="c-info-item">
+                            <i class="fas fa-user-friends fa-xs"></i>
+                            <span> {{ COURSE.ins }}</span>
+                          </div>
+                          <div class="c-info-item">
+                            <i class="fas fa-video"></i>
+                            <span> {{ COURSE.VidNum }}</span>
+                          </div>
+                          <div class="c-info-item">
+                            <i class="fas fa-code"></i>
+                            <span> {{ COURSE.Type }}</span>
+                          </div>
+                      </div>
+                      <div class="c-btn">
+                          <a href="{{ COURSE.link }}" target="_blank"><button>Enroll Course</button></a>
+                      </div>
+                    </div>
+                  </div>
+            </div>
+            {% endfor  %}
+            
+        </div>
+    </main>
+{% endblock %}

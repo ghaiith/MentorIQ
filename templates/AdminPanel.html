@@ -1,0 +1,66 @@
+{% extends "dashlayout.html" %}
+{% block title %}Admin Panel{% endblock %} 
+{% block content %}
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+
+          <div class="main__title">
+            <img src="assets/hello.svg" alt="" />
+            <div class="main__greeting">
+              <h1>Admin Panel</h1>
+              <p>Welcome to your admin dashboard</p>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+
+          <!-- MAIN CARDS STARTS HERE -->
+          <div class="main__cards">
+            <div class="card">
+              <i
+                class="fas fa-user-alt fa-2x text-lightblue"
+                aria-hidden="true"
+              ></i>
+              <div class="card_inner">
+                <p class="text-primary-p">Number of Visitors</p>
+                <span class="font-bold text-title">0</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <i class="fas fa-code fa-2x text-red" aria-hidden="true"></i>
+              <div class="card_inner">
+                <p class="text-primary-p">Number of Techniques</p>
+                <span class="font-bold text-title">{{numvTeq[0]['COUNT(id)']}}</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <i
+                class="fas fa-video fa-2x text-yellow"
+                aria-hidden="true"
+              ></i>
+              <div class="card_inner">
+                <p class="text-primary-p">Number of Courses</p>
+                <!-- {% for n in numvid %} -->
+                <span class="font-bold text-title">{{numvid[0]['COUNT(id)']}}</span>
+                <!-- {% endfor %} -->
+              </div>
+            </div>
+
+            <div class="card">
+              <i
+                class="fas fa-code-branch fa-2x text-green"
+                aria-hidden="true"
+              ></i>
+              <div class="card_inner">
+                <p class="text-primary-p">Number of Paths</p>
+                <span class="font-bold text-title">6</span>
+              </div>
+            </div>
+          </div>
+          <!-- MAIN CARDS ENDS HERE -->
+        </div>
+      </main>
+{% endblock %}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../static/dashstyles.css" />
+  </head>
+  <body>
+    <div class="LoginCount">
+        <div class="wrapper">
+            <div class="title">MentorIQ<br>Admin Login</div>
+            <form action="/AdminLogin" method="POST" autocomplete="off">
+              <div class="field">
+                <input type="text" required name="name">
+                <label>User</label>
+              </div>
+              <div class="field">
+                <input type="password" required name="password">
+                <label>Password</label>
+              </div>
+              <div class="content">
+              </div>
+              <div class="field">
+                <input type="submit" value="Login">
+              </div>
+              <div class="signup-link">This Page Just For Admin</div>
+            </form>
+          </div>
+      
+    </div>
+  </body>
+</html>

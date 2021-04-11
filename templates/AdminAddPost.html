@@ -1,0 +1,61 @@
+{% extends "dashlayout.html" %}
+{% block title %}Admin Add Post{% endblock %} 
+{% block content %}
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+
+          <div class="main__title">
+            <div class="main__greeting">
+              <h1>Add Posts</h1>
+              <p>Fill in all required fields</p>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+
+          <!-- MAIN CARDS STARTS HERE -->
+          <!-- MAIN CARDS ENDS HERE -->
+          <div class="AddPostForm">
+                <form method="POST" action="/AdminAddPost" enctype="multipart/form-data" autocomplete="off">
+                    <div class="form-sec">
+                      <label >Name of Course</label>
+                      <input type="text" name="name" required>
+                    </div>
+                    <div class="form-sec">
+                      <label>Number of Videos</label>
+                      <input type="number"name="VidNum" required>
+                    </div>
+                    <div class="form-sec">
+                      <label>Technique</label>
+                      <select name="Type" required>
+                        <option disabled selected>Select Technique</option>
+                         {% for TEQ in TEQ %} 
+                          <option value={{TEQ.T_name}}>{{TEQ.T_name}}</option>
+                         {% endfor  %} 
+                      </select>
+                    </div>
+                    <div class="form-sec">
+                        <label>Number of Publisher</label>
+                        <input type="text"name="ins" required>
+                    </div>
+                    <div class="form-sec">
+                        <label>Course Link</label>
+                        <input type="text"name="link">
+                      </div>
+                      <div class="form-sec">
+                        <label class="custom-file-upload">
+                            <input type="file" accept="image/*" id="inputimg" name="file" required />
+                            <i class="fas fa-upload"></i> Upload
+                        </label>
+                        <p>Select image for Post</p>
+                      </div>
+                      <div class="form-sunmit">
+                        <a href="#"><button type="submit" class="BtnSubmit">Submit</button></a>
+                      </div>
+                    
+                </form>
+          </div>
+        </div>
+      </main>
+{% endblock %}

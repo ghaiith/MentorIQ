@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/> -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.23/css/jquery.dataTables.css">
+    <link rel="stylesheet" href="../static/dashstyles.css" />
+    <title>{% block title %}{% endblock %}</title>
+  </head>
+  <body id="body">
+    <div class="container">
+      <nav class="navbar">
+        <div class="nav_icon" onclick="toggleSidebar()">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+        <div class="navbar__left">
+        </div>
+        <div class="navbar__right">
+          <a href="#">
+            <h5>Hello Admin</h6>
+            <!-- <i class="fa fa-user-circle-o" aria-hidden="true"></i> -->
+          </a>
+        </div>
+      </nav>
+{% block content %}
+{% endblock %}
+<div id="sidebar">
+    <div class="sidebar__title">
+      <div class="sidebar__img">
+        <h1>MentorIQ</h1>
+      </div>
+      <i
+        onclick="closeSidebar()"
+        class="fa fa-times"
+        id="sidebarIcon"
+        aria-hidden="true"
+      ></i>
+    </div>
+
+    <div class="sidebar__menu">
+      <div class="sidebar__link active_menu_link">
+        <i class="fa fa-home"></i>
+        <a href="{{ url_for('AdminPanel') }}">Dashboard</a>
+      </div>
+      <h2>Sections</h2>
+      <div class="sidebar__link">
+        <i class="fas fa-newspaper" aria-hidden="true"></i>
+        <a href="{{ url_for('AdminPosts') }}">Posts</a>
+      </div>
+      <div class="sidebar__link">
+        <i class="fas fa-laptop-code" aria-hidden="true"></i>
+        <a href="{{ url_for('AdminTeq') }}">Techniques</a>
+      </div>
+      <div class="sidebar__logout">
+        <i class="fa fa-power-off"></i>
+        <a href="/logout">Log out</a>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="../static/jquery.js"></script>
+<script>
+  $(document).ready( function () {
+$('#table_id').DataTable();
+} );
+</script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.23/js/jquery.dataTables.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+<script src="../static/dashscript.js"></script>
+</body>
+</html>

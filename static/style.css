@@ -1,0 +1,415 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scrollbar-color:#01C36A #040032;
+    -webkit-scrollbar-color:#01C36A #040032;
+}
+/* #################### MAIN PAGE #################### */
+
+#MainHeader{
+    width: 100%;
+    height: 590px;
+    background-color:#040032 ;
+}
+#MainHeader h4{
+    font-size: 25px
+}
+h4 span{
+    color: #01C36A;
+}
+/* ########## Main Navbar ########## */
+#MainNav{
+    background-color:#040032 ;
+    padding:20px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#MainNav h4{
+    color: white;
+    font-weight: 600;
+}
+#MainNav ul{
+    list-style-type: none;
+    display: inline-flex;
+}
+#MainNav ul li a{
+    color: white;
+    text-decoration: none;
+}
+.nav-item1 li{
+    margin: 0 15px;
+    font-weight: 400;
+}
+.nav-icons li{
+    margin: 0 5px;
+}
+.nav-item1 li a:hover{
+    color: #01C36A;
+    border-bottom: 2px solid #01C36A;
+}
+/* ########## Main Header ########## */
+.header-sec{
+    margin-top: 80px !important;
+}
+.WelJoin{
+    color: white;
+}
+.WelJoin h1{
+    font-size: 60px;
+    font-weight: 600;
+}
+.WelJoin h1 span{
+    color:#01C36A ;
+}
+.WelJoin button{
+    width:140px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #01C36A;
+    background: none;
+    font-weight: 400;
+}
+.WelJoin a button{
+    text-decoration: none;
+    color: #01C36A;
+}
+.WelJoin button:hover{
+    background-color:#01C36A ;
+    color: white;
+}
+.WelJoin button a:hover{
+    color: white;
+}
+#h-img{
+    width: 600px;
+}
+/* ########## How Can Sections ########## */
+.HowCan{
+    margin-top: -5px;
+    height: 225px;
+    background-color: #100B41;
+}
+.HowCan-1 h2{
+    color: white;
+    font-weight: 400;
+}
+.HowCan-1 p{
+    color: rgba(255, 255, 255, 0.514);
+}
+.HowCan-2{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.HowCan-2 .HowBox{
+    margin: 20px;
+}
+.HowBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.HowBox i{
+    color:#01C36A ;
+    font-size: 35px;
+    margin: 10px;
+}
+.HowBox p{
+    color: white;
+    text-align: center;
+}
+
+/* ########## Paths Sections ########## */
+#path{
+    text-align: center;
+}
+
+.containercard{
+    width: 1000px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+}
+.containercard .cardd{
+    position: relative;
+}
+.containercard .cardd .facce{
+    width: 300px;
+    height: 200px;
+    transition: 0.5s;
+}
+.containercard .cardd .facce.facce1{
+    position: relative;
+    background:  #040032;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin:0 10px;
+    z-index: 1;
+    transform: translateY(100px);
+
+}
+.containercard .cardd:hover .facce.facce1{
+    background: #01C36A;
+    transform: translateY(0);
+
+}
+.containercard .cardd .facce.facce1 .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.2;
+    transform: 0.5s;
+}
+.containercard .cardd:hover .facce.facce1 .content{
+    opacity: 1;
+}
+.containercard .cardd .facce.facce1 .content img{
+    max-width: 100px;
+}
+.containercard .cardd .facce.facce1 .content h3
+{
+    margin: 10px 0 0;
+    padding: 0;
+    color:#f6faf8;
+    text-align: center;
+    font-size: 1.5em;
+}
+.containercard .cardd .facce.facce2{
+    position: relative;
+    background: #040032;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin:0 10px;
+    box-sizing: border-box;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.8); */
+    transform: translateY(-100px);
+
+}
+.containercard .cardd:hover .facce.facce2{
+    transform: translateY(0);
+
+}
+.containercard .cardd .facce.facce2 .content p
+{
+    margin: 0;
+    padding: 0;
+
+}
+.containercard .cardd .facce.facce2 .content h3
+{
+    color: #01C36A;
+}
+.containercard .cardd .facce.facce2 .content a
+{
+    margin: 15px 0 0;
+    display: inline-block;
+    text-decoration: none;
+    font-weight: 900;
+    color:#01C36A;
+    padding: 5px;
+    border: 2px solid #01C36A;
+}
+.containercard .cardd .facce.facce2 .content a:hover
+{
+    background:  #01C36A;
+    color: white;
+}
+.facce h5{
+    font-size: 16px;
+    color: white;
+    font-weight: 200;
+}
+
+/* #################### END MAIN PAGE #################### */
+/* #################### path Pages #################### */
+.p-header{
+    height: 170px;
+    background-color: #040032;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.p-header h1 span{
+    color: #01C36A;
+}
+.p-header p{
+    font-size: 12px;
+}
+.col-md-3 a{
+    text-decoration: none;
+}
+.langcard{
+    width: 20rem;
+    border: rgba(0, 0, 0, 0.205) 0.1px solid;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.langcard:hover{
+    -webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #040032;
+    color: white;
+}
+.langcard h3{
+    font-weight: 600;
+    margin: 10px;
+}
+.langcard img{
+    width: 60px;
+    margin: 5px;
+}
+.langcard p{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+/* #################### Courses Pages #################### */
+.p-header img{
+    width: 50px;
+}
+.card-c{
+    background-color: #040032;
+    color: white;
+}
+.img-c{
+    height: 170px;
+    width: 286px;
+    object-fit: cover;
+}
+.card-title{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3; /* number of lines to show */
+    -webkit-box-orient: vertical;
+}
+.c-info{
+    font-size: 13px;
+    margin: 5px 0;
+}
+.c-info-item span{
+    margin-left: 5px;
+}
+.c-btn{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.c-btn a button{
+    width:140px;
+    height: 35px;
+    border-radius: 4px;
+    border: 1px solid #01C36A;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+    color: #01C36A;
+}
+.c-btn a button:hover{
+    background-color:#01C36A ;
+    color: white;
+}
+/* _____________________________________ */
+.comp{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.Compiler-btn{
+    width:140px;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid #040032;
+    background: none;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .Compiler-btn{
+    text-decoration: none;
+    color: #040032;
+  }
+  .Compiler-btn:hover{
+    background-color:#040032 ;
+    color: white;
+  }
+  /* ######################## Footer ##################### */
+footer{
+    margin-top: 35px;
+    background-color: #040032;
+    padding: 30px 20px;
+    margin-bottom: 0;
+}
+
+.footerh{
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+}
+.footerp{
+    color: white;
+    font-size: 14px;
+}
+.footer-icons{
+    color: white;
+    margin-right: 7px;
+}
+.footer-icons:hover{
+    color: gray;
+}
+.footer-sections{
+    list-style-type: none;
+    color: white;
+    text-align: left;
+    padding:10px;
+}
+.footer-sections li{
+    padding: 10px;
+    border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
+}
+.anc-section{
+    text-decoration: none;
+    color:rgb(192, 192, 192);
+}
+.anc-section:hover{
+    color: #01C36A;
+}
+.ps-3{
+    font-size: 20px;
+}
+/* ######################## End Footer ##################### */
+.card-dataa{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px 10px;
+    width: 400px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+}
+.card-dataa .card_inner{
+    margin: 10px;
+    font-size: 20px;
+}

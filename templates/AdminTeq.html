@@ -1,0 +1,51 @@
+{% extends "dashlayout.html" %}
+{% block title %}Admin Techniques{% endblock %} 
+{% block content %}
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+
+          <div class="main__title">
+            <img src="assets/hello.svg" alt="" />
+            <div class="main__greeting">
+              <h1>Techniques</h1>
+              <p>View All details about Techniques Here</p>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+
+          <!-- MAIN CARDS STARTS HERE -->
+          <!-- MAIN CARDS ENDS HERE -->
+
+          <div class="BtnCont">
+            <a href="{{ url_for('AdminAddTeq') }}"><button class="Adminadd"><i class="fas fa-plus"></i> Add Technique</button></a>
+          </div>
+          <div class="contTable">
+            <div class="main_table">
+              <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name Of Technique</th>
+                        <th>Num Of Technique</th>
+                        <th>Proprties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for T in TEQ %}
+                    <tr>
+                        <td>{{ T.id }}</td>
+                        <td>{{ T.T_name }}</td>
+                        <td>No info</td>
+                        <td>
+                          <a href="/DeleteTeq/{{T.id}}" class="btn btn-sm DelPost text-red"><i style="margin:0 15px;" class="fas fa-trash"></i></a>
+                        </td>
+                  {% endfor %}
+                </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </main>
+{% endblock %}

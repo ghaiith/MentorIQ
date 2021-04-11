@@ -1,0 +1,59 @@
+{% extends "dashlayout.html" %}
+{% block title %}Admin Posts{% endblock %} 
+{% block content %}
+
+      <main>
+        <div class="main__container">
+          <!-- MAIN TITLE STARTS HERE -->
+
+          <div class="main__title">
+            <div class="main__greeting">
+              <h1>Posts</h1>
+              <p>View All details about Posts Here</p>
+            </div>
+          </div>
+
+          <!-- MAIN TITLE ENDS HERE -->
+
+          <!-- MAIN CARDS STARTS HERE -->
+          <!-- MAIN CARDS ENDS HERE -->
+
+          <div class="BtnCont">
+            <a href="{{ url_for('AdminAddPost') }}"><button class="Adminadd"><i class="fas fa-plus"></i> Add Post</button></a>
+          </div>
+          <div class="contTable">
+            <div class="main_table">
+              <table id="table_id" class="display">
+                <thead>
+                    <tr>
+                        <th>id</th>
+                        <th>Name Of Course</th>
+                        <th>Name Of Publisher</th>
+                        <th>Name Of Technique</th>
+                        <th>Num Of Vid</th>
+                        <th>Proprties</th>
+                    </tr>
+                </thead>
+                <tbody>
+                  {% for COURSE in COURSES %}
+                    <tr>
+                        <td>{{ COURSE.id }}</td>
+                        <td>{{ COURSE.name }}</td>
+                        <td>{{ COURSE.ins }}</td>
+                        <td>{{ COURSE.Type }}</td>
+                        <td>{{ COURSE.VidNum }}</td>
+                        <td>
+                          <a href="/DeleteCourse/{{COURSE.id}}" class="btn btn-sm DelPost text-red"><i style="margin:0 15px;" class="fas fa-trash"></i></a>
+                          <a href="{{ COURSE.link }}" target="_blank" class="btn btn-sm text-yellow"><i class="fas fa-eye"></i></a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                  </tr>
+                </tbody>
+            </table>
+            </div>
+          </div>
+        </div>
+      </main>
+
+{% endblock %}
