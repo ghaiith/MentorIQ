@@ -1,28 +1,17 @@
-from flask import Flask, render_template, request, redirect, url_for, flash, session, g
+from flask import Flask, render_template, request, redirect, url_for, flash, session
 from cs50 import SQL
-from werkzeug.exceptions import default_exceptions, HTTPException, InternalServerError
-from werkzeug.security import check_password_hash,generate_password_hash
-from functools import wraps
-import datetime
-import time
-import calendar
 import os
-from flask import send_from_directory
 from werkzeug.utils import secure_filename
+from functools import wraps
 
 app = Flask(__name__)
-UPLOAD_FOLDER = "/Users/dell/Desktop/MentorIQ/static/img"
-UPLOAD_FOLDER = os.path.abspath(UPLOAD_FOLDER)
-
-ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
+UPLOAD_FOLDER = os.path.abspath("static/img")
 app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
 db = SQL("sqlite:///MentorIQ.db")
-global courses
-courses=db.execute("SELECT * FROM COURSES")
-global Teq
-Teq=db.execute("SELECT * FROM TEQ")
+
+ALLOWED_EXTENSIONS = {'txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'}
 
 def login_required(f):
     @wraps(f)
@@ -34,28 +23,26 @@ def login_required(f):
             return redirect(url_for('AdminLogin'))
     return wrap
 
+def image_path(file):
+    filename = ''
+    if file.filename == '':
+        flash('No selected file')
+    if file and allowed_file(file.filename):
+        filename = secure_filename(file.filename)
+    file_path = os.path.join('static', 'img', filename)
+    return file_path
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
+
 @app.route("/AdminPanel")
 @login_required
 def AdminPanel():
-    numvid=db.execute("SELECT COUNT(id) FROM COURSES")
-    numvTeq=db.execute("SELECT COUNT(id) FROM TEQ")
-    return render_template("AdminPanel.html",numvid=numvid,numvTeq=numvTeq)
+    num_vid = db.execute("SELECT COUNT(id) FROM COURSES")
+    num_teq = db.execute("SELECT COUNT(id) FROM TEQ")
+    return render_template("AdminPanel.html", numvid=num_vid, numvTeq=num_teq)
 
-def imagepath(file):
-    filename = ''
-    if file.filename == '':
-            flash('No selected file')
-    if file and allowed_file(file.filename):
-        filename = secure_filename(file.filename)
-    filenam = '\\static\\img\\' + filename
-    return filenam
-
-def allowed_file(filename):
-    return '.' in filename and \
-           filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
-
-#------------------------- Admin Login ------------------------------------------------------------------
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 @app.route("/AdminLogin", methods=["GET", "POST"])
 def AdminLogin():
     """Log admin in"""
@@ -133,7 +120,7 @@ def AdminAddPost():
     if request.method == "GET":
         COURSES = db.execute("SELECT * FROM COURSES")
         TEQ = db.execute("SELECT * FROM TEQ")
-        return render_template("AdminAddPost.html",COURSES=COURSES,TEQ=TEQ )
+        return render_template("AdminAddPost.html", COURSES=COURSES, TEQ=TEQ)
     else:
         name = request.form.get("name")
         VidNum = request.form.get("VidNum")
@@ -141,12 +128,11 @@ def AdminAddPost():
         ins = request.form.get("ins")
         link = request.form.get("link")
         file = request.files['file']
-        file.save(os.path.join(app.config['UPLOAD_FOLDER'],file.filename))
-        img = imagepath(file)
+        file.save(os.path.join(app.config['UPLOAD_FOLDER'], file.filename))
+        img = image_path(file)
         db.execute("INSERT INTO COURSES (name, VidNum, Type, ins, link, img) VALUES (:name, :VidNum, :Type, :ins, :link, :img)",
-                        name=name, VidNum=VidNum, Type=Type, ins=ins, link=link, img=img)
+                   name=name, VidNum=VidNum, Type=Type, ins=ins, link=link, img=img)
         return redirect(url_for('AdminPosts'))
-
 
 @app.route("/AdminTeq", methods=["GET", "POST"])
 @login_required

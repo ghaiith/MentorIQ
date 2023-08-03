@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="../static/animate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="../static/images/programming-code-signs.png">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/style1.css">
     <title>{% block title %}{% endblock %}</title>
 </head>
+
 <body>
     <header>
         <nav id="MainNav">
@@ -29,46 +31,53 @@
                 <li><a href="#"><i class="fab fa-github fa-lg"></i></a></li>
             </ul>
         </nav>
-{% block content %}
-{% endblock %}
-<footer>
-    <div class="container">
-        <div class="row g-3">
-            <div class="col-md-4">
-                <h4 class="footerh"><span>&#10094;</span> MentorIQ <span>&#8725;&#10095;</span></h4>
-                <br>
-                <p class="footerp">The MentorIQ platform is a free and independent platform to teach programming in all its fields and specializations in the form of specific paths chosen by the student, so that it can professionalize programming within the path desired by the student and improve the standard learning mechanism in universities as well as improve the self-education process</p>
-                <a class="footer-icons" href=""><i class="fab fa-facebook fa-2x"> </i></a>
-                <a class="footer-icons" href=""><i class="fab fa-instagram fa-2x"> </i></a>
-                <a class="footer-icons" href=""><i class="fab fa-youtube fa-2x"> </i></a>
-                <a class="footer-icons" href=""><i class="fab fa-linkedin fa-2x"> </i></a>
-              </div>
-            <div class="col-md-4">
-                <h3 class="footerh ps-3">Browse:</h3>
-                <ul class="footer-sections">
-                    <li><a class="anc-section" href="{{ url_for('index') }}">Home Page</a></li>
-                    <li><a class="anc-section" href="{{ url_for('FrontEnd') }}">Web FrontEnd</a></li>
-                    <li><a class="anc-section" href="#">Web Backend</a></li>
-                    <li><a class="anc-section" href="#">Mobile App Development</a></li>
-                    <li><a class="anc-section" href="#">Desktop App Development</a></li>
-                </ul>
-            </div>
-            <div class="col-md-4">
-              <h3 class="footerh ps-3">Support:</h3>
-              <ul class="footer-sections">
-                  <li><a class="anc-section" href="#">contactus</a></li>
-                  <li><a class="anc-section" href="#">aboutus</a></li>
-              </ul>
-          </div>
+        {% block content %}
+        {% endblock %}
+    </header>
+    <footer>
+        <div class="container">
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <h4 class="footerh"><span>&#10094;</span> MentorIQ <span>&#8725;&#10095;</span></h4>
+                    <br>
+                    <p class="footerp">The MentorIQ platform is a free and independent platform to teach programming
+                        in all its fields and specializations in the form of specific paths chosen by the student,
+                        so that it can professionalize programming within the path desired by the student and improve
+                        the standard learning mechanism in universities as well as improve the self-education process
+                    </p>
+                    <a class="footer-icons" href=""><i class="fab fa-facebook fa-2x"> </i></a>
+                    <a class="footer-icons" href=""><i class="fab fa-instagram fa-2x"> </i></a>
+                    <a class="footer-icons" href=""><i class="fab fa-youtube fa-2x"> </i></a>
+                    <a class="footer-icons" href=""><i class="fab fa-linkedin fa-2x"> </i></a>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footerh ps-3">Browse:</h3>
+                    <ul class="footer-sections">
+                        <li><a class="anc-section" href="{{ url_for('index') }}">Home Page</a></li>
+                        <li><a class="anc-section" href="{{ url_for('FrontEnd') }}">Web FrontEnd</a></li>
+                        <li><a class="anc-section" href="#">Web Backend</a></li>
+                        <li><a class="anc-section" href="#">Mobile App Development</a></li>
+                        <li><a class="anc-section" href="#">Desktop App Development</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3 class="footerh ps-3">Support:</h3>
+                    <ul class="footer-sections">
+                        <li><a class="anc-section" href="#">contactus</a></li>
+                        <li><a class="anc-section" href="#">aboutus</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
-    <hr>
-    <h5 style="text-align: center; color: rgba(255, 255, 255, 0.76); font-size: 14px;">© copyright save for MentorIQ to PeaceCrew</h5>
-</footer>
-<script src="../static/bootstrap.min.js"></script>
-<script src="../static/wow.min.js"></script> </body>
-<script>
-new WOW().init();
-</script>
+        <hr>
+        <h5 style="text-align: center; color: rgba(255, 255, 255, 0.76); font-size: 14px;">© copyright save for
+            MentorIQ to PeaceCrew</h5>
+    </footer>
+    <script src="../static/bootstrap.min.js"></script>
+    <script src="../static/wow.min.js"></script>
+    <script>
+        new WOW().init();
+    </script>
+</body>
+
 </html>

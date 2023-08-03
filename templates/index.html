@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,12 +9,13 @@
     <link rel="stylesheet" href="../static/animate.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="icon" href="../static/images/programming-code-signs.png">
     <link rel="stylesheet" href="../static/style.css">
     <link rel="stylesheet" href="../static/style1.css">
     <title>MentorIQ</title>
 </head>
+
 <body>
     <header id="MainHeader">
         <nav id="MainNav">
@@ -35,8 +37,11 @@
             <div class="row WelJoin align-items-center gx-5 justify-content-center">
                 <div class="col-md-6">
                     <h1>Welcome in <br> Our <span>Platform</span></h1>
-                    <p>The MentorIQ platform is a free and independent platform to teach programming in all its fields and specializations in the form of specific paths chosen by the student, so that it can professionalize programming within the path desired by the student and improve the standard learning mechanism in universities as well as improve the self-education process</p>
-                        <a href="#paths"><button>Start Learning</button></a>
+                    <p>The MentorIQ platform is a free and independent platform to teach programming in all its
+                        fields and specializations in the form of specific paths chosen by the student, so that it can
+                        professionalize programming within the path desired by the student and improve the standard
+                        learning mechanism in universities as well as improve the self-education process</p>
+                    <a href="#paths"><button>Start Learning</button></a>
                 </div>
                 <div class="col-md-6">
                     <img id="h-img" src="../static/images/undraw_Code_typing_re_p8b9.svg" alt="">
@@ -76,62 +81,65 @@
         <h1 style="text-align: center;">Select Your Path</h1>
         <p style="text-align: center; opacity: 0.6; font-weight: 600;">We will Add Some Paths Soon</p>
         <div class="containercard">
-                <div class="cardd">
-                    <div class="facce facce1">
-                        <div class="content">
-                            <img src="../static/images/web.png">
-                            <h3>Web FrontEnd</h3>
-                        </div>
-                    </div>
-                    <div class="facce facce2">
-                        <div class="content">
-                            <h5>This path includes designing and developing website interfaces and page design</h5>
-                            <a href="{{ url_for('FrontEnd') }}">Start Learning</a>
-        
-                        </div>
+            <div class="cardd">
+                <div class="facce facce1">
+                    <div class="content">
+                        <img src="../static/images/web.png">
+                        <h3>Web FrontEnd</h3>
                     </div>
                 </div>
-                <div class="cardd">
-                    <div class="facce facce1">
-                        <div class="content">
-                            <img src="../static/images/backend.png">
-                            <h3>Web BackEnd</h3>
-                        </div>
-                    </div>
-                    <div class="facce facce2">
-                        <div class="content">
-                            <h5>This path includes the study of programming the functions of websites and database design and management</h5>
-                            <a href="#">Start Learning</a>
-                        </div>
+                <div class="facce facce2">
+                    <div class="content">
+                        <h5>This path includes designing and developing website interfaces and page design</h5>
+                        <a href="{{ url_for('FrontEnd') }}">Start Learning</a>
                     </div>
                 </div>
-                <div class="cardd">
-                    <div class="facce facce1">
-                        <div class="content">
-                            <img src="../static/images/mobile.png">
-                            <h3>Mobile App Development</h3>
-                        </div>
+            </div>
+            <div class="cardd">
+                <div class="facce facce1">
+                    <div class="content">
+                        <img src="../static/images/backend.png">
+                        <h3>Web BackEnd</h3>
                     </div>
-                    <div class="facce facce2">
-                        <div class="content">
-                            <h5>This path includes the study of programming and designing mobile phone applications of all kinds.</h5>
-                            <a href="#">Start Learning</a>
-                        </div>
+                </div>
+                <div class="facce facce2">
+                    <div class="content">
+                        <h5>This path includes the study of programming the functions of websites and database design
+                            and management</h5>
+                        <a href="#">Start Learning</a>
                     </div>
-                </div>           
-                <div class="cardd">
-                    <div class="facce facce1">
-                        <div class="content">
-                            <img src="../static/images/desktop.png">
-                            <h3>Desktop App Development</h3>
-                        </div>
+                </div>
+            </div>
+            <div class="cardd">
+                <div class="facce facce1">
+                    <div class="content">
+                        <img src="../static/images/mobile.png">
+                        <h3>Mobile App Development</h3>
                     </div>
-                    <div class="facce facce2">
-                        <div class="content">
-                            <h5>This path includes the study of programming and designing computer applications of all kinds.</h5>
-                            <a href="#">Start Learning</a>
-                        </div>
+                </div>
+                <div class="facce facce2">
+                    <div class="content">
+                        <h5>This path includes the study of programming and designing mobile phone applications of
+                            all kinds.</h5>
+                        <a href="#">Start Learning</a>
                     </div>
+                </div>
+            </div>
+            <div class="cardd">
+                <div class="facce facce1">
+                    <div class="content">
+                        <img src="../static/images/desktop.png">
+                        <h3>Desktop App Development</h3>
+                    </div>
+                </div>
+                <div class="facce facce2">
+                    <div class="content">
+                        <h5>This path includes the study of programming and designing computer applications of all
+                            kinds.</h5>
+                        <a href="#">Start Learning</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <section id="analysis" class="container mt-5 mb-5">
@@ -140,28 +148,28 @@
                 <div class="card card-dataa">
                     <i class="fas fa-user-alt fa-2x text-lightblue" aria-hidden="true"></i>
                     <div class="card_inner">
-                      <span class="text-primary-p">Number of Visitors</span>
-                      <span class="font-bold text-title counter" data-target="8">0</span>
+                        <span class="text-primary-p">Number of Visitors</span>
+                        <span class="font-bold text-title counter" data-target="8">0</span>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="card card-dataa">
                     <i class="fas fa-code fa-2x text-red" aria-hidden="true"></i>
                     <div class="card_inner">
-                      <span class="text-primary-p">Number of Techniques</span>
-                      <span class="font-bold text-title counter" data-target="{{numvTeq[0]['COUNT(id)']}}">0</span>
+                        <span class="text-primary-p">Number of Techniques</span>
+                        <span class="font-bold text-title counter" data-target="{{numvTeq[0]['COUNT(id)']}}">0</span>
                     </div>
-                  </div>
+                </div>
             </div>
             <div class="col-md-4">
                 <div class="card card-dataa">
                     <i class="fas fa-video fa-2x text-yellow" aria-hidden="true"></i>
                     <div class="card_inner">
-                      <span class="text-primary-p">Number of Courses</span>
-                      <span class="font-bold text-title counter" data-target="{{numvid[0]['COUNT(id)']}}">0</span>
+                        <span class="text-primary-p">Number of Courses</span>
+                        <span class="font-bold text-title counter" data-target="{{numvid[0]['COUNT(id)']}}">0</span>
                     </div>
-                  </div>
+                </div>
             </div>
         </div>
     </section>
@@ -171,12 +179,15 @@
                 <div class="col-md-4">
                     <h4 class="footerh"><span>&#10094;</span> MentorIQ <span>&#8725;&#10095;</span></h4>
                     <br>
-                    <p class="footerp">The MentorIQ platform is a free and independent platform to teach programming in all its fields and specializations in the form of specific paths chosen by the student, so that it can professionalize programming within the path desired by the student and improve the standard learning mechanism in universities as well as improve the self-education process</p>
+                    <p class="footerp">The MentorIQ platform is a free and independent platform to teach programming
+                        in all its fields and specializations in the form of specific paths chosen by the student, so
+                        that it can professionalize programming within the path desired by the student and improve the
+                        standard learning mechanism in universities as well as improve the self-education process</p>
                     <a class="footer-icons" href=""><i class="fab fa-facebook fa-2x"> </i></a>
                     <a class="footer-icons" href=""><i class="fab fa-instagram fa-2x"> </i></a>
                     <a class="footer-icons" href=""><i class="fab fa-youtube fa-2x"> </i></a>
                     <a class="footer-icons" href=""><i class="fab fa-linkedin fa-2x"> </i></a>
-                  </div>
+                </div>
                 <div class="col-md-4">
                     <h3 class="footerh ps-3">Browse:</h3>
                     <ul class="footer-sections">
@@ -188,49 +199,49 @@
                     </ul>
                 </div>
                 <div class="col-md-4">
-                  <h3 class="footerh ps-3">Support:</h3>
-                  <ul class="footer-sections">
-                      <li><a class="anc-section" href="#">contactus</a></li>
-                      <li><a class="anc-section" href="#">aboutus</a></li>
-                  </ul>
-              </div>
+                    <h3 class="footerh ps-3">Support:</h3>
+                    <ul class="footer-sections">
+                        <li><a class="anc-section" href="#">contactus</a></li>
+                        <li><a class="anc-section" href="#">aboutus</a></li>
+                    </ul>
                 </div>
             </div>
         </div>
         <hr>
-        <h5 style="text-align: center; color: rgba(255, 255, 255, 0.76); font-size: 14px;">© copyright save for MentorIQ to PeaceCrew</h5>
+        <h5 style="text-align: center; color: rgba(255, 255, 255, 0.76); font-size: 14px;">© copyright save for
+            MentorIQ to PeaceCrew</h5>
     </footer>
-<script>
-    const counters = document.querySelectorAll('.counter');
-const speed = 200; // The lower the slower
+    <script>
+        const counters = document.querySelectorAll('.counter');
+        const speed = 200; // The lower the slower
 
-counters.forEach(counter => {
-	const updateCount = () => {
-		const target = +counter.getAttribute('data-target');
-		const count = +counter.innerText;
+        counters.forEach(counter => {
+            const updateCount = () => {
+                const target = +counter.getAttribute('data-target');
+                const count = +counter.innerText;
 
-		// Lower inc to slow and higher to slow
-		const inc = target / speed;
+                // Lower inc to slow and higher to slow
+                const inc = target / speed;
 
-		// console.log(inc);
-		// console.log(count);
+                // console.log(inc);
+                // console.log(count);
 
-		// Check if target is reached
-		if (count < target) {
-			// Add inc to count and output in counter
-			counter.innerText = count + inc;
-			// Call function every ms
-			setTimeout(updateCount, 1);
-		} else {
-			counter.innerText = target;
-		}
-	};
+                // Check if target is reached
+                if (count < target) {
+                    // Add inc to count and output in counter
+                    counter.innerText = count + inc;
+                    // Call function every ms
+                    setTimeout(updateCount, 1);
+                } else {
+                    counter.innerText = target;
+                }
+            };
 
-	updateCount();
-});
-
-</script>
-<script src="../static/bootstrap.min.js"></script>
-<script src="../static/wow.min.js"></script>     
+            updateCount();
+        });
+    </script>
+    <script src="../static/bootstrap.min.js"></script>
+    <script src="../static/wow.min.js"></script>
 </body>
+
 </html>

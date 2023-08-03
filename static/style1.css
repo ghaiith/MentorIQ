@@ -1,7 +1,20 @@
-.col-md-3 a{
+/* Reset all margins, paddings, borders, and use box-sizing border-box */
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scrollbar-color: #01C36A #040032;
+    -webkit-scrollbar-color: #01C36A #040032;
+  }
+  
+  /* Styles for .langcard */
+  .col-md-3 a {
     text-decoration: none;
-}
-.langcard{
+  }
+  
+  .langcard {
     width: 20rem;
     border: rgba(0, 0, 0, 0.205) 0.1px solid;
     padding: 20px;
@@ -11,64 +24,76 @@
     align-items: center;
     color: black;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-.langcard:hover{
+  }
+  
+  .langcard:hover {
     -webkit-transition: .3s ease-in-out;
-	transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     background-color: #040032;
     color: white;
-}
-.langcard h3{
+  }
+  
+  .langcard h3 {
     font-weight: 600;
     margin: 10px;
-}
-.langcard img{
+  }
+  
+  .langcard img {
     width: 60px;
     margin: 5px;
-}
-.langcard p{
+  }
+  
+  .langcard p {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
-}
-/* #################### Courses Pages #################### */
-.p-header img{
+  }
+  
+  /* Styles for .card-c */
+  .p-header img {
     width: 50px;
-}
-.card-c{
+  }
+  
+  .card-c {
     background-color: #040032;
     color: white;
-}
-.img-c{
+  }
+  
+  .img-c {
     height: 170px;
     width: 286px;
     object-fit: cover;
-}
-.card-title{
+  }
+  
+  .card-title {
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
     -webkit-line-clamp: 3; /* number of lines to show */
     -webkit-box-orient: vertical;
-}
-.c-info{
+  }
+  
+  .c-info {
     font-size: 13px;
     margin: 5px 0;
-}
-.c-info-item span{
+  }
+  
+  .c-info-item span {
     margin-left: 5px;
-}
-.c-btn{
+  }
+  
+  .c-btn {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.c-btn a button{
-    width:140px;
+  }
+  
+  .c-btn a button {
+    width: 140px;
     height: 35px;
     border-radius: 4px;
     border: 1px solid #01C36A;
@@ -76,21 +101,24 @@
     font-weight: 600;
     cursor: pointer;
     color: #01C36A;
-}
-.c-btn a button:hover{
-    background-color:#01C36A ;
+  }
+  
+  .c-btn a button:hover {
+    background-color: #01C36A;
     color: white;
-}
-/* _____________________________________ */
-.comp{
+  }
+  
+  /* Styles for .comp */
+  .comp {
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.Compiler-btn{
-    width:140px;
+  }
+  
+  .Compiler-btn {
+    width: 140px;
     height: 40px;
     border-radius: 4px;
     border: 1px solid #040032;
@@ -98,69 +126,83 @@
     font-weight: 600;
     cursor: pointer;
   }
-  .Compiler-btn{
+  
+  .Compiler-btn {
     text-decoration: none;
     color: #040032;
   }
-  .Compiler-btn:hover{
-    background-color:#040032 ;
+  
+  .Compiler-btn:hover {
+    background-color: #040032;
     color: white;
   }
-  /* ######################## Footer ##################### */
-footer{
+  
+  /* Styles for footer */
+  footer {
     margin-top: 35px;
     background-color: #040032;
     padding: 30px 20px;
     margin-bottom: 0;
-}
-
-.footerh{
+  }
+  
+  .footerh {
     font-size: 40px;
     color: white;
     font-weight: bold;
-}
-.footerp{
+  }
+  
+  .footerp {
     color: white;
     font-size: 14px;
-}
-.footer-icons{
+  }
+  
+  .footer-icons {
     color: white;
     margin-right: 7px;
-}
-.footer-icons:hover{
+  }
+  
+  .footer-icons:hover {
     color: gray;
-}
-.footer-sections{
+  }
+  
+  .footer-sections {
     list-style-type: none;
     color: white;
     text-align: left;
-    padding:10px;
-}
-.footer-sections li{
+    padding: 10px;
+  }
+  
+  .footer-sections li {
     padding: 10px;
     border-bottom: 1px rgba(128, 128, 128, 0.315) solid;
-}
-.anc-section{
+  }
+  
+  .anc-section {
     text-decoration: none;
-    color:rgb(192, 192, 192);
-}
-.anc-section:hover{
+    color: rgb(192, 192, 192);
+  }
+  
+  .anc-section:hover {
     color: #01C36A;
-}
-.ps-3{
+  }
+  
+  .ps-3 {
     font-size: 20px;
-}
-/* ######################## End Footer ##################### */
-.card-dataa{
+  }
+  
+  /* Styles for .card-dataa */
+  .card-dataa {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding:20px 10px;
+    padding: 20px 10px;
     width: 400px;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
-}
-.card-dataa .card_inner{
+  }
+  
+  .card-dataa .card_inner {
     margin: 10px;
     font-size: 20px;
-}
+  }
+  
